@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --color-paper: #f3efe6;
+  --color-card: #fffdf8;
+  --color-ink: #1c1915;
+  --color-ink-soft: #5e584e;
+  --color-line: #e0d9cc;
+  --color-sage: #2c6b4a;
+  --color-sage-soft: #e4f0e8;
+  --color-clay: #b5522a;
+  --color-clay-soft: #f8e7df;
+  --radius-card: 1.25rem;
+}
+
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    color-scheme: dark;
+    --color-paper: #12110e;
+    --color-card: #1c1b17;
+    --color-ink: #f3efe6;
+    --color-ink-soft: #b7b0a4;
+    --color-line: #2e2c26;
+    --color-sage: #9dccb0;
+    --color-sage-soft: #1a2c22;
+    --color-clay: #e7a08a;
+    --color-clay-soft: #2c1d17;
+  }
+}
+
+:root.dark {
+  color-scheme: dark;
+  --color-paper: #12110e;
+  --color-card: #1c1b17;
+  --color-ink: #f3efe6;
+  --color-ink-soft: #b7b0a4;
+  --color-line: #2e2c26;
+  --color-sage: #9dccb0;
+  --color-sage-soft: #1a2c22;
+  --color-clay: #e7a08a;
+  --color-clay-soft: #2c1d17;
+}
+
+:root.light {
+  color-scheme: light;
+  --color-paper: #f3efe6;
+  --color-card: #fffdf8;
+  --color-ink: #1c1915;
+  --color-ink-soft: #5e584e;
+  --color-line: #e0d9cc;
+  --color-sage: #2c6b4a;
+  --color-sage-soft: #e4f0e8;
+  --color-clay: #b5522a;
+  --color-clay-soft: #f8e7df;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility pt-safe {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+@utility pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+@utility pb-nav {
+  padding-bottom: calc(8.75rem + env(safe-area-inset-bottom));
+}

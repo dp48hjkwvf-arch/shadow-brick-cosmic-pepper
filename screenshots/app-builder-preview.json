@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LifeOS",
+      "hasCanvas": false,
+      "bodyTextLen": 24,
+      "bodyTextHash": "f325a1f5020bb96527b06ce0b11249a9465c0882717bbe011901995a83656d2e",
+      "bodyTextPrefix": "LifeOS Tu día, en orden.",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LifeOS",
+      "hasCanvas": false,
+      "bodyTextLen": 24,
+      "bodyTextHash": "f325a1f5020bb96527b06ce0b11249a9465c0882717bbe011901995a83656d2e",
+      "bodyTextPrefix": "LifeOS Tu día, en orden.",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
